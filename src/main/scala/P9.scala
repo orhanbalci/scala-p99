@@ -1,5 +1,5 @@
 object P9 {
-	def pack(arg: List[Any]) : List[Any] ={		
+	def pack[A](arg: List[A]) : List[List[A]] ={		
 		arg match {
 			case Nil => Nil
 			case  x :: xs =>
