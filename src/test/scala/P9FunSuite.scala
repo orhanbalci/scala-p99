@@ -10,8 +10,7 @@ class P9FunSuite extends FunSuite {
            List('a, 'a),
            List('d),
            List('e, 'e, 'e, 'e))
-        == P9.pack(
-          List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)))
+        == P9.pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)))
 
   }
 
