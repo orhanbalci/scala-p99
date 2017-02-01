@@ -5,9 +5,10 @@ object P23 {
 
     def remover(k: Int, innerArg: List[A]): List[A] = {
       (k, arg) match {
-        case (0, _)          => innerArg
-        case (_, _) if k > 0 => remover(k-1,P20.removeAt(r.nextInt(innerArg.length), innerArg)._1)
-        case (_, _)          => Nil
+        case (0, _) => innerArg
+        case (_, _) if k > 0 =>
+          remover(k - 1, P20.removeAt(r.nextInt(innerArg.length), innerArg)._1)
+        case (_, _) => Nil
       }
     }
 
