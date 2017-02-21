@@ -4,4 +4,3 @@ scalaVersion := "2.11.0"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 
-scalafmtConfig in ThisBuild := Some(file(".scalafmt.conf"))
