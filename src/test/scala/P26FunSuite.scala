@@ -1,6 +1,6 @@
 import org.scalatest.FunSuite
 
-class P26Funsuite extends FunSuite {
+class P26FunSuite extends FunSuite {
   test("combinations of 2 of list List(1,2,3,4)") {
     val combinations = P26.combinations(2, List(1, 2, 3, 4))
     assert(combinations.exists(xs => xs == List(1, 2)))
