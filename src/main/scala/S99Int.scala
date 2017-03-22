@@ -10,6 +10,10 @@ class S99Int(val start: Int) {
     }
   }
 
+  def isCoprimeTo(rhs: Int): Boolean = {
+    gcd(start, rhs) == 1
+  }
+
 }
 
 object S99Int {
