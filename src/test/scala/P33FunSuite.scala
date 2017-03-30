@@ -11,6 +11,6 @@ class P33FunSuite extends FunSuite {
   }
 
   test("35 is coprime to 64") {
-    assert(false == 35.isCoprimeTo(64))
+    assert(true == 35.isCoprimeTo(64))
   }
 }

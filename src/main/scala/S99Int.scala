@@ -14,6 +14,9 @@ class S99Int(val start: Int) {
     gcd(start, rhs) == 1
   }
 
+  def totient(): Int = {
+    List.range(1, start).map(x => if (isCoprimeTo(x)) 1 else 0).sum
+  }
 }
 
 object S99Int {
@@ -26,4 +29,5 @@ object S99Int {
       case (x, y) if y > x  => gcd(x, y - x);
     }
   }
+
 }
