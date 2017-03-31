@@ -17,6 +17,21 @@ class S99Int(val start: Int) {
   def totient(): Int = {
     List.range(1, start).map(x => if (isCoprimeTo(x)) 1 else 0).sum
   }
+
+  def primeFactors(): List[Int] = {
+    def primeFactorsInner(arg: Int, primesNeeded: List[Int]): List[Int] = {
+      primesNeeded.find(arg % _ == 0) match {
+        case Some(a) => a :: primeFactorsInner(arg / a, primesNeeded)
+        case None    => List()
+      }
+    }
+
+    primeFactorsInner(start,
+                      List
+                        .range(2, round(ceil(sqrt(start))).asInstanceOf[Int])
+                        .filter(x => new S99Int(x).isPrime)
+                        .sorted)
+  }
 }
 
 object S99Int {
