@@ -32,6 +32,20 @@ class S99Int(val start: Int) {
                         .filter(x => new S99Int(x).isPrime)
                         .sorted)
   }
+
+  def primeFactorMultiplicity(): List[(Int, Int)] = {
+    primeFactors().distinct.map(a => {
+      (a,
+       List
+         .fill(start / a)(a)
+         .foldLeft((0, start)) {
+           case ((count, remaining), next) if remaining % next == 0 =>
+             (count + 1, remaining / next)
+           case ((count, remaining), _) => (count, remaining)
+         }
+         ._1)
+    })
+  }
 }
 
 object S99Int {
